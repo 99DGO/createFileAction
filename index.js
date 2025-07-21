@@ -16,6 +16,7 @@ async function createFile (){
     }
     try{
       await fs.access(absolutePath)
+      core.setFailed("crow");
     }catch(error){
       core.setFailed("couldn't create directory structure");
     }
